@@ -36,12 +36,27 @@ func (c *Client) EnableDebugging(debug bool) {
 	c.consumer.Debug(debug)
 }
 
-func (c *Client) Do(method string, parts ...string) (resp *http.Response, err error) {
+/*
+Perform a two-legged OAuth 1.0 request against the context.io API.
+
+The supported values for the method are "GET", "POST", "PUT", and "DELETE".
+
+The params string-string map is for any extra parameters you wish to provide to
+an endpoint, that will be URL-encoded.
+
+The rest of the arguments are the various parts of the API endpoint's URI, done
+like a print-like function:
+
+	var account Account
+	...
+	c.Do("GET", nil, "accounts", account.Id, "files")
+
+...this is so that you do not have to constantly re-create the a URI string to
+pass to this function.
+*/
+func (c *Client) Do(method string, params map[string]string, parts ...string) (resp *http.Response, err error) {
 	// Build the URL.
 	url := fmt.Sprintf("%s/%s/%s", API_URL, API_VERSION, strings.Join(parts, "/"))
-
-	// Some empty params
-	params := make(map[string]string)
 
 	// The access token
 	accessToken := &oauth.AccessToken{}
