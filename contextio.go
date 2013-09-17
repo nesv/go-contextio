@@ -18,7 +18,7 @@ const (
 )
 
 func New(key, secret string) *Client {
-	oc := oauth.NewConsumer(key, secret, nil)
+	oc := oauth.NewConsumer(key, secret, oauth.ServiceProvider{})
 	return &Client{consumer: oc}
 }
 
@@ -40,7 +40,7 @@ func (c *Client) Do(method string, parts ...string) (resp *http.Response, err er
 		resp, err = c.consumer.Post(url, nil, nil)
 
 	case "PUT":
-		resp, err = c.consumer.Put(url, nil, nil)
+		resp, err = c.consumer.Put(url, "", nil, nil)
 
 	case "DELETE":
 		resp, err = c.consumer.Delete(url, nil, nil)
