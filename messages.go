@@ -22,8 +22,8 @@ type MessageAddressesBlock struct {
 }
 
 type Address struct {
-	Email `json:"email"`
-	Name  `json:"name"`
+	Email string `json:"email"`
+	Name  string `json:"name"`
 }
 
 type MessagePersonInfoBlock map[string]ThumbnailBlock
