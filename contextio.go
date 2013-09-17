@@ -84,3 +84,10 @@ func (c *Client) Unmarshal(response *http.Response, v interface{}) error {
 	}
 	return json.Unmarshal(body, v)
 }
+
+/*
+ Copies the details of the existing client into a the new one.
+*/
+func (c *Client) CopyTo(newclient *Client) {
+	*newclient = *c
+}
