@@ -6,7 +6,7 @@ package contextio
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nesv/oauth"
+	"github.com/mrjones/oauth"
 	"io/ioutil"
 	"net/http"
 	"strings"
