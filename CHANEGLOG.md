@@ -1,3 +1,8 @@
+2013-09-18 Nick Saika <nicksaika@gmail.com>
+* 0.0.3
+* Added a slew of new structs.
+* This is going to (hopefully) be the last release before a minor version bump.
+
 2013-09-17 Nick Saika <nicksaika@gmail.com>
 * 0.0.2
 * Got the underlying interface working, however it requires the use of
