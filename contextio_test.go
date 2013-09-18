@@ -17,7 +17,7 @@ func TestClient(t *testing.T) {
 	}
 
 	client := New(key, secret)
-	resp, err := client.Do("GET", "accounts")
+	resp, err := client.Do("GET", nil, "accounts")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -27,6 +27,6 @@ func TestClient(t *testing.T) {
 		t.Fatal(err)
 	}
 	for i, account := range accounts {
-		t.Log("Account:", i, account.Id, account.Username)
+		t.Log("Account:", i, account.Username)
 	}
 }
