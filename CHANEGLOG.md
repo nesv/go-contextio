@@ -1,3 +1,7 @@
+2013-10-22 Nick Saika <nicksaika@gmail.com>
+* 0.0.4
+* Added the Message.DateReceived field
+
 2013-09-18 Nick Saika <nicksaika@gmail.com>
 * 0.0.3
 * Added a slew of new structs.
