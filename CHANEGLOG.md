@@ -1,4 +1,9 @@
 2013-10-22 Nick Saika <nicksaika@gmail.com>
+* 0.0.5
+* Fixed the type on the MessageFilesBlock.BodySection field
+* Updated the tests
+
+2013-10-22 Nick Saika <nicksaika@gmail.com>
 * 0.0.4
 * Added the Message.DateReceived field
 
