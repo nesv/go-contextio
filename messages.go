@@ -3,6 +3,7 @@ package contextio
 type Message struct {
 	Date           int                    `json:"date"`
 	DateIndexed    int                    `json:"date_indexed"`
+	DateReceived   int                    `json:"date_received"`
 	Addresses      MessageAddressesBlock  `json:"addresses"`
 	PersonInfo     MessagePersonInfoBlock `json:"person_info"`
 	EmailMessageId string                 `json:"email_message_id"`
