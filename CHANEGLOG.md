@@ -1,3 +1,9 @@
+2013-11-11 Nick Saika <nicksaika@gmail.com>
+* 0.1.0
+* Added the MessageBody struct
+* Minor version bump as I *think* this is all that should be in this release
+  prior to doing the hunt-and-peck for bugs
+
 2013-10-22 Nick Saika <nicksaika@gmail.com>
 * 0.0.5
 * Fixed the type on the MessageFilesBlock.BodySection field
