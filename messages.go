@@ -50,3 +50,10 @@ type MessageSourcesBlock struct {
 	Label       string `json:"label"`
 	ResourceURL string `json:"resource_url"`
 }
+
+type MessageBody struct {
+	Type        string `json:"type"`
+	Charset     string `json:"charset"`
+	Content     string `json:"content"`
+	BodySection string `json:"body_section"`
+}
