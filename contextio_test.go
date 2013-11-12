@@ -73,9 +73,9 @@ func TestRetrieveMessageBody(t *testing.T) {
 	client := newTestClient()
 	for _, m := range testMessages {
 		t.Log("Fetching message:", m.MessageId)
-		//params := map[string]string{"type": "text/plain"}
-		//resp, err := client.Do("GET", params, "accounts", testAccount.Id, "messages", m.MessageId, "body")
-		resp, err := client.Do("GET", nil, "accounts", testAccount.Id, "messages", m.MessageId, "body")
+		params := map[string]string{"type": "text/plain"}
+		resp, err := client.Do("GET", params, "accounts", testAccount.Id, "messages", m.MessageId, "body")
+		//resp, err := client.Do("GET", nil, "accounts", testAccount.Id, "messages", m.MessageId, "body")
 		if err != nil {
 			t.Fatal(err)
 		}
