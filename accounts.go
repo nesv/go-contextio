@@ -20,3 +20,11 @@ type AccountEmailAddressBlock struct {
 	Validated int    `json:"validated"`
 	Primary   int    `json:"primary"`
 }
+
+type AddAccountResponse struct {
+	Success           bool   `json:"success"`
+	Id                string `json:"id"`
+	ResourceUrl       string `json:"resource_url"`
+	AccessToken       string `json:"access_token,omitempty"`
+	AccessTokenSecret string `json:"access_token_secret,omitempty"`
+}

@@ -1,4 +1,8 @@
 2013-11-17 Nick Saika <nicksaika@gmail.com>
+* 0.1.2
+* Added struct for the JSON response from "POST /accounts"
+
+2013-11-17 Nick Saika <nicksaika@gmail.com>
 * 0.1.1
 * Added some structs that represent the JSON objects that would exist in
   request bodies
